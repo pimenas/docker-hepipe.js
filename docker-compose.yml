@@ -1,0 +1,10 @@
+version: "2"
+
+services:
+  hepipe.js:
+    image: pimenas/docker-hepipe.js:latest
+    container_name: hepipe
+    volumes:
+      - ./config.js:/usr/src/app/hepipe.js/config.js
+    network_mode: "host"
+    restart: always
